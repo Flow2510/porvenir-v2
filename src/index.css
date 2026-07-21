@@ -1,0 +1,60 @@
+html{
+    font-family: 'host grotesk', sans-serif;
+    color: #f4efe7;
+}
+
+.footer-overlay, .discover-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #b1a69625);
+    z-index: -1;
+}
+
+.hero-overlay, .houses-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #b1a69625, transparent);
+    z-index: -1;
+}
+
+.activities-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #b1a69625, transparent);
+    z-index: -1;
+}
+
+.app-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #171818;
+    z-index: -2;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: white;
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}

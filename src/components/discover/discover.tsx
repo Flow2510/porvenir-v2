@@ -1,0 +1,63 @@
+import { motion, useScroll, useTransform } from "motion/react"
+import { useRef } from "react"
+
+export default function Discover() {
+    const tags = [
+        "Jungle Trails",
+        "Waterfalls",
+        "Minca",
+        "Tayrona",
+        "Caribbean Beaches",
+        "Birdwatching",
+        "Coffee Farms",
+        "Sunsets",
+        "Local Food",
+        "Wildlife",
+        "Hiking",
+        "Nature"
+    ];
+    const text = "Explore the Best of Santa Marta"
+    const words = text.split(" ")
+    const ref = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["start end", "start center"]
+    })
+    const y = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"])
+
+    return(
+        <section id="discover" className="relative">
+            <div className="p-5 flex flex-col gap-10">
+                <h2 className="text-sm">Discover</h2>
+                <p className="text-6xl flex flex-wrap gap-x-3 lg:text-9xl lg:gap-x-7 lg:max-w-[85%]" ref={ref}>
+                    {words.map((w, i) => (
+                        <span className="inline-block overflow-hidden" key={w + i}>
+                            <motion.span 
+                                style={{ y }}
+                                className="inline-block"
+                            >
+                                {w}
+                            </motion.span>
+                        </span>
+                    ))}
+                </p>
+                <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
+                    <p className="lg:flex-1 lg:text-[#b1a696] lg:text-4xl lg:pr-15">From lush jungle trails to white-sand Caribbean beaches, every day brings a new adventure. Discover breathtaking landscapes, charming local villages, and unforgettable experiences just moments from the hostel.</p>
+                    <div className="flex flex-col gap-6 lg:flex-1">
+                        <p className="lg: w-80">Your perfect base for exploring</p>
+                        <div className="flex flex-wrap gap-2 w-full max-w-125 lg:max-w-200">
+                            {tags.map((t) => (
+                                <p className="py-3 px-6 border odd:text-[#b1a696] text-2xl rounded-full flex items-center justify-center" key={t}>
+                                    <span>{t}</span>
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="discover-overlay">
+
+            </div>
+        </section>
+    )
+}
