@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+
 
 export default function Footer(){
+    const { i18n } = useTranslation();
+
     return(
         <footer className="pb-1 pt-20 flex flex-col gap-8 relative">
             <div className="p-5 flex flex-col gap-6">
@@ -24,10 +28,16 @@ export default function Footer(){
                         <a href="www.facebook.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Facebook">
                             <i className="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="www.facebook.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Facebook">
+                        <a href="www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Aitbnb">
+                            <i className="fa-brands fa-airbnb"></i>
+                        </a>
+                        <a href="www.google.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Booking">
+                            <i className="fa-brands fa-blogger-b"></i>
+                        </a>
+                        <a href="www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via WhatsApp">
                             <i className="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="www.booking.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Bookink">
+                        <a href="www.google.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via mail">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
                     </div>
@@ -43,8 +53,19 @@ export default function Footer(){
             </div>
             <div className="flex flex-col gap-8">
                 <div className="h-px w-full bg-[#b1a696]"></div>
-                <div className="p-5 text-sm">
+                <div className="p-5 text-sm flex justify-between">
                     <p className="text-[#b1a696]">Website made by - <a className="underline text-[#f4efe7]" href="https://sendra-florian.vercel.app/" target="_blank">Flow</a></p>
+                    <div className="flex gap-4">
+                        <button onClick={() => i18n.changeLanguage("fr")} className="cursor-pointer">
+                            Français
+                        </button>
+                        <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer">
+                            English
+                        </button>
+                        <button onClick={() => i18n.changeLanguage("es")} className="cursor-pointer">
+                            Español
+                        </button>
+                    </div>
                 </div>
                 <div className="p-5 overflow-hidden w-full">
                     <motion.img 

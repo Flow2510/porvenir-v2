@@ -90,8 +90,8 @@ export default function ReviewSection() {
             </div>
             <div className="flex items-center gap-8 lg:justify-between">
                 <div className="flex gap-2">
-                    <button onClick={prevHandleClick} className="bg-neutral-200 hover:text-neutral-50 hover:border-amber-50 border cursor-pointer border-amber-50 hover:bg-neutral-900 text-neutral-900 rounded-full h-12 w-12 flex justify-center items-center text-xl"><i className="fa-solid fa-arrow-left"></i></button>
-                    <button onClick={nextHandleClick} className="bg-neutral-200 hover:text-neutral-50 hover:border-amber-50 border cursor-pointer border-amber-50 hover:bg-neutral-900 text-neutral-900 rounded-full h-12 w-12 flex justify-center items-center text-xl"><i className="fa-solid fa-arrow-right"></i></button>
+                    <button onClick={prevHandleClick} className="bg-neutral-200 hover:text-neutral-50 hover:border-amber-50 border cursor-pointer border-amber-50 hover:bg-neutral-900 text-neutral-900 rounded-full h-12 w-12 flex justify-center items-center text-xl" aria-label="Previous reviews"><i className="fa-solid fa-arrow-left"></i></button>
+                    <button onClick={nextHandleClick} className="bg-neutral-200 hover:text-neutral-50 hover:border-amber-50 border cursor-pointer border-amber-50 hover:bg-neutral-900 text-neutral-900 rounded-full h-12 w-12 flex justify-center items-center text-xl" aria-label="Next reviews"><i className="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div className="w-full h-0.5 bg-[#b1a69640] lg:max-w-75">
                     <div className="h-0.5 bg-[#b1a696] transition-[width] duration-300" style={{ width: `${filledWidth}%`}}>

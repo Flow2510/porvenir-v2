@@ -20,6 +20,9 @@ export default function LocationCta({ toggleModal, modalIsOpen } : Props){
                 <span>Perfectly located between the jungle and the Caribbean coast.</span>
                 <button onClick={toggleModal} className="text-[#b1a696] underline underline-offset-4 cursor-pointer w-fit">Find us</button>
             </p>
+            <div className="location-cta-overlay">
+
+            </div>
         </section>
     )
 }

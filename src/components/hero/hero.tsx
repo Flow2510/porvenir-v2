@@ -1,7 +1,9 @@
 import { motion, useScroll, useTransform } from "motion/react"
 import { useRef, useState } from "react"
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+    const { t } = useTranslation();
     const [isDesktop, ] = useState(window.innerWidth > 1024)
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
@@ -20,13 +22,13 @@ export default function Hero() {
                 </div>
                 <div className="flex justify-between items-end">
                     <div className="text-[#b1a696] text-[23px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
-                        <span>Closer to</span>
-                        <span>Nature, Closer</span>
-                        <span>to Yourself</span>
+                        <span>{t('hero.title.line1')}</span>
+                        <span>{t('hero.title.line2')}</span>
+                        <span>{t('hero.title.line3')}</span>
                     </div>
-                    <div className="text-sm font-semibold tracking-[-0.2px]">
-                        <p>Escape to a peaceful jungle retreat</p>
-                        <p>between Santa Marta and Minca.</p>
+                    <div className="text-sm font-semibold tracking-[-0.2px] text-right">
+                        <p>{t('hero.subtitle.line1')}</p>
+                        <p>{t('hero.subtitle.line2')}</p>
                     </div>
                 </div>
             </div>
@@ -55,13 +57,13 @@ export default function Hero() {
             </div>
             <div className="flex-1 flex flex-col justify-between">
                 <div className="text-[#b1a696] text-[23px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
-                    <span>Closer to</span>
-                    <span>Nature—Closer</span>
-                    <span>to Yourself</span>
+                    <span>{t('hero.title.line1')}</span>
+                    <span>{t('hero.title.line2')}</span>
+                    <span>{t('hero.title.line3')}</span>
                 </div>
                 <div className="text-sm font-semibold tracking-[-0.2px]">
-                    <p>Escape to a peaceful jungle retreat</p>
-                    <p>between Santa Marta and Minca.</p>
+                    <p>{t('hero.subtitle.line1')}</p>
+                    <p>{t('hero.subtitle.line2')}</p>
                 </div>
             </div>
             <div className="flex flex-col gap-4 ">

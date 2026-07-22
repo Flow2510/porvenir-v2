@@ -34,6 +34,19 @@ The website is optimized for:
 
 Images are served using responsive formats to improve loading performance.
 
+## 🚧 Coming Soon
+
+The current version is a showcase website. Future improvements planned for the project include:
+
+- Dynamic image galleries
+- Multi-language support (English / Spanish / French)
+- Contact form with backend integration
+- Content management through a CMS
+- Enhanced animations and page transitions
+- Accessibility improvements
+- SEO optimization
+- Performance monitoring and analytics
+
 ## 🚀 Installation
 
 Clone the repository:

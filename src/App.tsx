@@ -13,17 +13,18 @@ import AdventureSection from './components/adventuresection/adventuresection'
 import ReviewSection from './components/reviewsection/reviewsection'
 import BrandVisual from './components/brandvisual/brandvisual'
 import Footer from './components/footer/footer'
-import ReservationModal from './components/reservationmodal/reservationmodal'
 import InfoModal from './components/infomodal/infomodal'
 import rooms from './data/rooms.json'
+import Lenis from 'lenis'
+import Loader from './components/loader/loader'
 
 function App() {
   const [isDesktop, ] = useState(window.innerWidth > 1024);
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  const [reservationIsOpen, setReservationIsOpen] = useState(false)
   const [infoIsOpen, setInfoIsOpen] = useState(false)
   const [selectedRoom, setSelectedRoom] = useState("")
+  const [loader, setLoader] = useState(true)
 
   const openInfoModal = (selected : string) => {
     setSelectedRoom(selected)
@@ -39,6 +40,26 @@ function App() {
       setMenuIsOpen(true)
     }
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoader(false)
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+      duration: 4,
+      wheelMultiplier: 0.7,
+    });
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,15 +78,13 @@ function App() {
   return (
     <div className='relative'>
       <AnimatePresence mode='wait'>
+        {loader && 
+          <Loader />
+        }
         {menuIsOpen &&
           <Menu 
             isDesktop={isDesktop}
             toggleMenu={toggleMenu}
-          />
-        }
-        {reservationIsOpen &&
-          <ReservationModal 
-            toggleReservation={() => setReservationIsOpen(prev => !prev)}
           />
         }
         {infoIsOpen &&

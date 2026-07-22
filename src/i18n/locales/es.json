@@ -1,0 +1,19 @@
+{
+    "menu": {
+        "welcome": "Welcome",
+        "introduction": "Introduction",
+        "rooms": "Rooms",
+        "hostel": "The Hostel",
+        "activities": "Activities",
+        "feedback": "Feedback"
+    },
+    "hero": {
+        "title": "Closer to Nature, Closer to Yourself",
+        "subtitle": "A peaceful jungle retreat near Santa Marta."
+    },
+    "navbar": {
+        "rooms": "Rooms",
+        "activities": "Activities",
+        "contact": "Contact"
+    }
+}

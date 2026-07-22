@@ -71,7 +71,7 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                                                     media="(min-width: 768px)"
                                                     srcSet={item.img.desktop}
                                                 />
-                                                <img className="w-full h-full object-cover bg-amber-200" src={item.img.mobile} alt="" />
+                                                <img className="w-full h-full object-cover bg-lime-600" src={item.img.mobile} alt="" />
                                             </picture>
                                             
                                         </button>
@@ -107,10 +107,10 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                         <button>Reserve Now</button>
                     </div>
                     <div className="flex gap-2">
-                        <a className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
+                        <a aria-label="Reserve on AirBnb" className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
                             <i className="fa-brands fa-airbnb"></i>
                         </a>
-                        <a className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
+                        <a aria-label="Reserve on Booking" className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
                             <i className="fa-brands fa-blogger-b"></i>
                         </a>
                     </div>

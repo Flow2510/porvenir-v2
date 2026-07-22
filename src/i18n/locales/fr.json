@@ -1,0 +1,19 @@
+{
+    "menu": {
+        "welcome": "Accueil",
+        "introduction": "Introduction",
+        "rooms": "Chambres",
+        "hostel": "L'Auberge",
+        "activities": "Activitées",
+        "feedback": "Avis"
+    },
+    "hero": {
+        "title": "Escape into Nature",
+        "subtitle": "A peaceful jungle retreat near Santa Marta."
+    },
+    "navbar": {
+        "rooms": "Rooms",
+        "activities": "Activities",
+        "contact": "Contact"
+    }
+}

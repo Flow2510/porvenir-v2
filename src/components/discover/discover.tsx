@@ -1,7 +1,9 @@
 import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
+import { useTranslation } from "react-i18next";
 
 export default function Discover() {
+    const { t } = useTranslation();
     const tags = [
         "Jungle Trails",
         "Waterfalls",
@@ -16,7 +18,8 @@ export default function Discover() {
         "Hiking",
         "Nature"
     ];
-    const text = "Explore the Best of Santa Marta"
+
+    const text = t('discover.title')
     const words = text.split(" ")
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
@@ -42,13 +45,16 @@ export default function Discover() {
                     ))}
                 </p>
                 <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
-                    <p className="lg:flex-1 lg:text-[#b1a696] lg:text-4xl lg:pr-15">From lush jungle trails to white-sand Caribbean beaches, every day brings a new adventure. Discover breathtaking landscapes, charming local villages, and unforgettable experiences just moments from the hostel.</p>
+                    <p className="lg:flex-1 lg:text-[#b1a696] lg:text-4xl lg:pr-15">{t('discover.text')}</p>
                     <div className="flex flex-col gap-6 lg:flex-1">
-                        <p className="lg: w-80">Your perfect base for exploring</p>
+                        <p className="lg: w-80">{t('discover.subtitle')}</p>
                         <div className="flex flex-wrap gap-2 w-full max-w-125 lg:max-w-200">
-                            {tags.map((t) => (
-                                <p className="py-3 px-6 border odd:text-[#b1a696] text-2xl rounded-full flex items-center justify-center" key={t}>
-                                    <span>{t}</span>
+                            {tags.map((tag) => (
+                                <p 
+                                    className="py-3 px-6 border odd:text-[#b1a696] text-2xl rounded-full flex items-center justify-center" 
+                                    key={tag}
+                                >
+                                    <span>{t(`discover.tags.${tag}`)}</span>
                                 </p>
                             ))}
                         </div>
