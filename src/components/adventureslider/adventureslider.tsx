@@ -4,12 +4,14 @@ import 'swiper/css';
 import { useRef } from "react";
 import { useScroll, useTransform } from "motion/react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     isDesktop: boolean;
 }
 
 export default function AdventureSlider({ isDesktop } : Props) {
+    const { t } = useTranslation()
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -22,43 +24,43 @@ export default function AdventureSlider({ isDesktop } : Props) {
     const activities = [
         {
             name: "jungle",
-            title: "Explore the Jungle",
-            text: "Step into the lush tropical rainforest surrounding the lodge. Follow scenic trails, discover exotic wildlife, listen to the sounds of nature, and enjoy breathtaking viewpoints hidden deep within the Sierra Nevada.",
+            title: t('activities.jungle.title'),
+            text: t('activities.jungle.text'),
             img: {
                 mobile: "/jungle-mobile.webp",
                 desktop: "/jungle-desktop.webp"
             },
-            alt: "Hiking trail through the jungle near Santa Marta"
+            alt: t('activities.jungle.alt')
         },
         {
             name: "santa-marta",
-            title: "Visit Santa Marta",
-            text: "Discover the oldest city in Colombia. Wander through its colorful historic center, enjoy local cafés and restaurants, visit the marina, and experience the vibrant Caribbean atmosphere just a short drive away.",
+            title: t('activities.santa-marta.title'),
+            text: t('activities.santa-marta.text'),
             img: {
                 mobile: "/santamarta-mobile.webp",
                 desktop: "/santamarta-desktop.webp"
             },
-            alt: "Historic center of Santa Marta"
+            alt: t('activities.santa-marta.alt')
         },
         {
             name: "tayrona-park",
-            title: "Tayrona National Park",
-            text: "Spend a day exploring one of Colombia's most iconic national parks. Hike through tropical forests, encounter native wildlife, and reach spectacular beaches such as Cabo San Juan, where the jungle meets the Caribbean Sea.",
+            title: t('activities.tayrona-park.title'),
+            text: t('activities.tayrona-park.text'),
             img: {
                 mobile: "/tayrona-mobile.webp",
                 desktop: "/tayrona-desktop.webp"
             },
-            alt: "Beach in Tayrona National Park"
+            alt: t('activities.tayrona-park.alt')
         },
         {
             name: "caribbean-beaches",
-            title: "Relax on Caribbean Beaches",
-            text: "Escape to the stunning Caribbean coastline and unwind on golden sandy beaches with crystal-clear water. Perfect for swimming, sunbathing, snorkeling, or simply enjoying the peaceful tropical scenery.",
+            title: t('activities.caribbean-beaches.title'),
+            text: t('activities.caribbean-beaches.text'),
             img: {
                 mobile: "/beach-mobile.webp",
                 desktop: "/beach-desktop.webp"
             },
-            alt: "Caribbean beach near Santa Marta"
+            alt: t('activities.caribbean-beaches.alt')
         }
     ];
 
@@ -68,15 +70,15 @@ export default function AdventureSlider({ isDesktop } : Props) {
                 <div className="w-full sticky top-0 overflow-hidden">
                     <motion.div className="flex flex-nowrap" style={{ x }}>
                         {activities.map((activity, i) => (
-                            <div className="h-dvh w-[75%] shrink-0 p-2" key={activity.name}>
-                                <div className="w-full h-full relative rounded-4xl overflow-hidden">
+                            <div className="h-dvh w-[75%] shrink-0 p-2 flex items-center" key={activity.name}>
+                                <div className="w-full h-[80%] relative rounded-4xl overflow-hidden">
                                     <div className="absolute top-0 left-0 w-full h-full rounded-4xl overflow-hidden">
                                         <picture>
                                             <source
                                                 media="(min-width: 768px)"
                                                 srcSet={activity.img.desktop}
                                             />
-                                            <motion.img src={activity.img.mobile} className="w-full scale-125 h-full object-cover inline-block" alt="" style={{ x: xImg }}/>
+                                            <motion.img src={activity.img.mobile} className="w-full scale-125 h-full object-cover inline-block" alt={activity.alt} style={{ x: xImg }}/>
                                         </picture>                                        
                                     </div>
                                     <div className="relative p-10 flex flex-col justify-between h-full leading-[100%]">

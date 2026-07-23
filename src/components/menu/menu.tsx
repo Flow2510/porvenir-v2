@@ -41,9 +41,9 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
                             <nav className="flex flex-col text-7xl pt-4 text-[#b1a696]">
                                 {menu.map((m, i) => (
                                     <a 
-                                        onClick={toggleMenu} 
+                                        onClick={toggleMenu}
                                         className="w-fit overflow-hidden hover:text-[#f4efe7]" 
-                                        href="#welcome"
+                                        href={`#${m}`}
                                         key={m}
                                     >
                                         <motion.span
@@ -133,66 +133,18 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
             <div className="w-full h-full bg-[#2a2725] rounded-4xl flex flex-col justify-between">
                 <div className="p-5 flex flex-col justify-between flex-1">
                     <nav className="flex flex-col text-4xl pt-4 text-[#b1a696] hover:text-[#f4efe7]">
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#welcome">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.5 } }}
-                                exit={{ y: "-100%", transition: { delay: 0 } }}
-                                className="inline-block"
-                            >
-                                Welcome
-                            </motion.span>
-                        </a>
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#intro">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.55 } }}
-                                exit={{ y: "-100%", transition: { delay: 0.05 } }}
-                                className="inline-block"
-                            >
-                                Introduction
-                            </motion.span>
-                        </a>
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#houses">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.6 } }}
-                                exit={{ y: "-100%", transition: { delay: 0.1 } }}
-                                className="inline-block"
-                            >
-                                Houses
-                            </motion.span>
-                        </a>
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#infos">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.65 } }}
-                                exit={{ y: "-100%", transition: { delay: 0.15 } }}
-                                className="inline-block"
-                            >
-                                Informations
-                            </motion.span>
-                        </a>
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#activities">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.7 } }}
-                                exit={{ y: "-100%", transition: { delay: 0.2 } }}
-                                className="inline-block"
-                            >
-                                Activities
-                            </motion.span>
-                        </a>
-                        <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#feedback">
-                            <motion.span
-                                initial={{ y: "-100%" }}
-                                animate={{ y: "0%", transition: { delay: 0.75 } }}
-                                exit={{ y: "-100%", transition: { delay: 0.25 } }}
-                                className="inline-block"
-                            >
-                                Feedback
-                            </motion.span>
-                        </a>                        
+                        {menu.map((m, i) => (
+                            <a onClick={toggleMenu} className="w-fit overflow-hidden" href="#welcome" key={m}>
+                                <motion.span
+                                    initial={{ y: "-100%" }}
+                                    animate={{ y: "0%", transition: { delay: 0.5 + (i/20) } }}
+                                    exit={{ y: "-100%", transition: { delay: 0 + (i/20) } }}
+                                    className="inline-block"
+                                >
+                                    {t(`menu.${m}`)}
+                                </motion.span>
+                            </a>
+                        ))}                                                
                     </nav>
                     <motion.div 
                         initial={{ opacity: 0 }}

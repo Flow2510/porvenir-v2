@@ -1,19 +1,134 @@
 {
     "menu": {
         "welcome": "Accueil",
-        "introduction": "Introduction",
+        "introduction": "Présentation",
         "rooms": "Chambres",
-        "hostel": "L'Auberge",
-        "activities": "Activitées",
+        "hostel": "L'auberge",
+        "activities": "Activités",
         "feedback": "Avis"
     },
     "hero": {
-        "title": "Escape into Nature",
-        "subtitle": "A peaceful jungle retreat near Santa Marta."
+        "title": {
+            "line1": "Plus proche de",
+            "line2": "la nature, plus proche",
+            "line3": "de vous-même"
+        },
+        "subtitle": {
+            "line1": "Évadez-vous dans un havre de paix au cœur de la jungle.",
+            "line2": "Entre Santa Marta et Minca."
+        }
+    },
+    "intro": {
+        "text1": "Nichée entre Santa Marta et Minca, notre auberge est un lieu où la forêt tropicale donne le rythme. Réveillez-vous au chant des oiseaux, savourez de délicieux petits-déjeuners aux saveurs tropicales, détendez-vous dans un cadre paisible et découvrez l'équilibre parfait entre aventure et sérénité.",
+        "text2": "Commencez votre journée avec des fruits tropicaux frais, terminez-la avec un cocktail sous les étoiles et profitez des plaisirs simples de la vie, au cœur de la nature."
+    },
+    "discover": {
+        "title": "Découvrez le meilleur de Santa Marta",
+        "text": "Des sentiers luxuriants de la jungle aux plages de sable blanc des Caraïbes, chaque journée est une nouvelle aventure. Découvrez des paysages à couper le souffle, de charmants villages locaux et des expériences inoubliables à quelques minutes de l'auberge.",
+        "subtitle": "Le point de départ idéal pour explorer la région",
+        "tags": {
+            "Jungle Trails": "Sentiers de jungle",
+            "Waterfalls": "Cascades",
+            "Minca": "Minca",
+            "Tayrona": "Tayrona",
+            "Caribbean Beaches": "Plages des Caraïbes",
+            "Birdwatching": "Observation des oiseaux",
+            "Coffee Farms": "Plantations de café",
+            "Sunsets": "Couchers de soleil",
+            "Local Food": "Cuisine locale",
+            "Wildlife": "Faune sauvage",
+            "Hiking": "Randonnée",
+            "Nature": "Nature"
+        }
+    },
+    "rooms": {
+        "chamber": {
+            "name": "Chambre",
+            "title": "Chambre privée au cœur de la jungle",
+            "text": "Un espace privé conçu pour vous permettre de vous détendre après une journée d'exploration. Profitez d'une chambre chaleureuse et confortable avec tout le nécessaire pour vous reposer, vous ressourcer et vivre un séjour paisible dans une atmosphère accueillante.",
+            "alt": "Chambre privée avec un lit double confortable et une ambiance chaleureuse"
+        },
+        "bed": {
+            "name": "Lit",
+            "title": "Dortoir partagé au cœur de la jungle",
+            "text": "Un lit confortable dans un dortoir partagé, idéal pour les voyageurs en quête de rencontres et de nouvelles expériences. Profitez de votre espace personnel tout en partageant l'ambiance conviviale et chaleureuse de l'auberge.",
+            "alt": "Dortoir partagé avec des lits individuels confortables"
+        },
+        "lodge": {
+            "name": "Lodge",
+            "title": "Lodge privé avec jardin",
+            "text": "Un refuge privé entouré par la nature, où le temps semble ralentir. Détendez-vous sur votre terrasse privée avec un hamac, profitez de moments de calme à l'ombre et laissez-vous porter par une atmosphère paisible et unique.",
+            "alt": "Lodge en pleine nature avec terrasse privée et hamac"
+        },
+        "location-cta": {
+            "title": "Localisation",
+            "text": "Idéalement situé entre la jungle et la côte caraïbe.",
+            "button": "Nous trouver"
+        }
+    },
+    "infos": {
+        "terrace": {
+            "title": "Un refuge caché au-dessus de la jungle",
+            "text": "Notre terrasse offre un havre de paix entouré de paysages tropicaux, d'un air pur et de l'atmosphère unique de la Sierra Nevada.",
+            "alt": "Terrasse panoramique sur la jungle"
+        },
+        "garden": {
+            "title": "La nature pour seul décor",
+            "text": "Explorez un jardin tropical où chaque sentier révèle de nouvelles couleurs, de nouveaux parfums et les merveilles cachées des paysages sauvages de Colombie.",
+            "alt": "Jardin tropical luxuriant"
+        },
+        "pool": {
+            "title": "Une oasis naturelle pour se détendre",
+            "text": "Après une journée d'aventure dans la jungle ou le long de la côte caraïbe, détendez-vous et ressourcez-vous dans notre piscine extérieure paisible.",
+            "alt": "Piscine extérieure entourée par la jungle"
+        }
+    },
+    "info-modal": {
+        "button": "Réserver maintenant"
+    },
+    "adventures": {
+        "subtitle": "Expériences",
+        "title": "Chaque jour est une nouvelle aventure",
+        "text1": "Que vous recherchiez des moments de détente en pleine nature ou des aventures inoubliables, notre emplacement vous offre un accès privilégié aux cascades, aux sentiers de randonnée, aux plantations de café, à la ville animée de Santa Marta et aux magnifiques plages du parc national de Tayrona.",
+        "text2": "Explorez la région à votre rythme et vivez des expériences inoubliables à seulement quelques minutes de l'auberge."
+    },
+    "activities": {
+        "jungle": {
+            "title": "Explorez la jungle",
+            "text": "Partez à la découverte de la forêt tropicale luxuriante qui entoure le lodge. Empruntez des sentiers pittoresques, observez une faune exotique, écoutez les sons de la nature et admirez des panoramas spectaculaires cachés au cœur de la Sierra Nevada.",
+            "alt": "Sentier de randonnée dans la jungle près de Santa Marta"
+        },
+        "santa-marta": {
+            "title": "Visitez Santa Marta",
+            "text": "Découvrez la plus ancienne ville de Colombie. Flânez dans son centre historique coloré, profitez de ses cafés et restaurants, promenez-vous sur la marina et imprégnez-vous de la vibrante atmosphère des Caraïbes, à seulement quelques minutes de route.",
+            "alt": "Plage animée de Santa Marta de nuit"
+        },
+        "tayrona-park": {
+            "title": "Parc national de Tayrona",
+            "text": "Passez une journée à explorer l'un des parcs nationaux les plus emblématiques de Colombie. Traversez des forêts tropicales, observez la faune locale et rejoignez des plages spectaculaires comme Cabo San Juan, où la jungle rencontre la mer des Caraïbes.",
+            "alt": "Lagon dans le parc national de Tayrona"
+        },
+        "caribbean-beaches": {
+            "title": "Détendez-vous sur les plages des Caraïbes",
+            "text": "Évadez-vous sur le magnifique littoral caribéen et profitez de plages de sable doré bordées d'une eau cristalline. Idéal pour nager, bronzer, faire du snorkeling ou simplement admirer la beauté paisible des paysages tropicaux.",
+            "alt": "Plage des Caraïbes près de Santa Marta"
+        }
+    },
+    "footer": {
+        "subtitle": {
+            "line1": "Votre maison dans la jungle,",
+            "line2": "près de la côte des Caraïbes."
+        },
+        "text1": "Découvrez un refuge caché dans la jungle colombienne, où confort, aventure et nature se rencontrent aux portes de Santa Marta.",
+        "text2": "Un lieu paisible pour ralentir, explorer et découvrir la beauté de la forêt tropicale des Caraïbes.",
+        "button": {
+            "english": "Anglais",
+            "french": "Français",
+            "spanish": "Espagnole"
+        }
     },
     "navbar": {
-        "rooms": "Rooms",
-        "activities": "Activities",
-        "contact": "Contact"
+        "menu": "Menu",
+        "close": "Fermer"
     }
 }

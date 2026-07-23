@@ -1,15 +1,13 @@
 import { AnimatePresence, motion } from "motion/react"
+import { useTranslation } from "react-i18next";
 
 type Props = {
     readonly room: {
         id: string;
-        title: string;
-        text: string;
         img: {
             mobile: string;
             desktop: string;
         };
-        alt: string;
         gallery: {
             img: {
                 mobile: string;
@@ -27,7 +25,8 @@ type Props = {
 }
 
 export default function CardDesktop({ room, animate, openInfoModal } : Props) {
-    const text = room.title
+    const { t } = useTranslation();
+    const text = t(`rooms.${room.id}.title`)
     const letters = text.split(' ')
 
     return(
@@ -81,7 +80,7 @@ export default function CardDesktop({ room, animate, openInfoModal } : Props) {
                                     transition={{ duration: 0.3 }}
                                     className="max-w-100"
                                 >
-                                    {room.text}
+                                    {t(`rooms.${room.id}.text`)}
                                 </motion.p>
                             </div>
                         </div>

@@ -1,13 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 type Props = {
     readonly room: {
         id: string;
-        title: string;
-        text: string;
         img: {
             mobile: string;
             desktop: string;
         };
-        alt: string;
         gallery: {
             img: {
                 mobile: string;
@@ -24,6 +23,7 @@ type Props = {
 }
 
 export default function Card({ room, openInfoModal } : Props ){
+    const { t } = useTranslation();
     
     return(
             <article className="flex flex-col gap-6">
@@ -44,8 +44,8 @@ export default function Card({ room, openInfoModal } : Props ){
                     </div>
                 </button>
                 <div className="font-semibold flex flex-col gap-4">
-                    <h3 className="text-4xl">{room.title}</h3>
-                    <p className="text-sm max-w-[80%]">{room.text}</p>
+                    <h3 className="text-4xl">{t(`rooms.${room.id}.title`)}</h3>
+                    <p className="text-sm max-w-[80%]">{t(`rooms.${room.id}.text`)}</p>
                 </div>
             </article>
     )

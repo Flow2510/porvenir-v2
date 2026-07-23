@@ -1,13 +1,10 @@
 [
   {
     "id": "chamber",
-    "title": "Private Jungle Room",
-    "text": "A private space designed to help you unwind after a day of exploration. Enjoy a warm and comfortable room with everything you need to relax, recharge, and experience a peaceful stay in a welcoming atmosphere.",
     "img": {
       "mobile": "/chambre-mobile.webp",
       "desktop": "/chambre-desktop.webp"
     },
-    "alt": "Private room with a cozy double bed and warm atmosphere",
     "gallery": [
       {
         "img": {
@@ -41,8 +38,6 @@
   },
   {
     "id": "bed",
-    "title": "Shared Jungle Dorm",
-    "text": "A comfortable bed in a shared room designed for travelers looking for connection and new experiences. Enjoy your own cozy space while sharing the vibrant and friendly atmosphere of a welcoming hostel.",
     "img": {
       "mobile": "/chambre-commune-mobile.webp",
       "desktop": "/chambre-commune-desktop.webp"
@@ -81,13 +76,10 @@
   },
   {
     "id": "lodge",
-    "title": "Private Garden Lodge",
-    "text": "A private retreat surrounded by nature, where time slows down. Relax on your own patio with a hammock, enjoy peaceful moments in the shade, and let yourself be carried away by a calm and unique atmosphere.",
     "img": {
       "mobile": "/hamac-mobile.webp",
       "desktop": "/hamac-desktop.webp"
     },
-    "alt": "Nature lodge with a private terrace and hammock",
     "gallery": [
       {
         "img": {

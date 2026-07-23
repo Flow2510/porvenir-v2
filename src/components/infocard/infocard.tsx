@@ -15,46 +15,13 @@ export default function InfoCard({ index, length, info, isDesktop }: Props){
         isDesktop ?
             <AnimatePresence mode="wait">
                 <article 
-                    className="w-full h-full bg-[#2a2725] rounded-4xl"
+                    className="w-full h-full flex items-center"
                 >
-                    <div className="h-full flex flex-col justify-between p-5">
-                        <div>
-                            <p className="text-4xl lg:max-w-[70%] flex flex-wrap gap-x-2" key={`${info.name} title`}>
-                                {title.map((word, i) => (
-                                    <span key={word + i} className="overflow-hidden">
-                                        <motion.span
-                                            initial={{ y : "100%" }}
-                                            animate={{ y : "0%" }}
-                                            exit={{ y : "-100%" }}
-                                            transition={{ duration: 0.5}}
-                                            className="inline-block"
-                                        >
-                                            {word}
-                                        </motion.span>
-                                    </span>
-                                ))}
-                            </p>
-                        </div>
-                        <div className="flex w-full justify-between items-end gap">
-                            <div className="flex gap-2 flex-1">
-                                <span className="inline-block border px-3 rounded-full py-1 overflow-hidden">
-                                    <motion.span 
-                                        key={`${info.name} index`}
-                                        initial={{ y : "100%" }}
-                                        animate={{ y : "0%" }}
-                                        exit={{ y : "-100%" }}
-                                        transition={{ duration: 0.5}}
-                                        className="inline-block">0{index}
-                                    </motion.span>
-                                </span>
-                                <span className="inline-block border px-3 rounded-full py-1 overflow-hidden text-[#b1a696]">
-                                    <span 
-                                        className="inline-block">0{length}</span>
-                                </span>
-                            </div>
-                            <div className="flex-1 text-sm ">
-                                <p className="flex flex-wrap gap-x-1" key={`${info.name} text`}>
-                                    {text.map((word, i) => (
+                    <div className="w-full h-[60%] bg-[#2a2725] rounded-4xl">
+                        <div className="h-full flex flex-col justify-between p-5">
+                            <div>
+                                <p className="text-4xl leading-[120%] lg:max-w-[70%] flex flex-wrap gap-x-2" key={`${info.name} title`}>
+                                    {title.map((word, i) => (
                                         <span key={word + i} className="overflow-hidden">
                                             <motion.span
                                                 initial={{ y : "100%" }}
@@ -68,6 +35,41 @@ export default function InfoCard({ index, length, info, isDesktop }: Props){
                                         </span>
                                     ))}
                                 </p>
+                            </div>
+                            <div className="flex w-full justify-between items-end gap">
+                                <div className="flex gap-2 flex-1">
+                                    <span className="inline-block border px-3 rounded-full py-1 overflow-hidden">
+                                        <motion.span 
+                                            key={`${info.name} index`}
+                                            initial={{ y : "100%" }}
+                                            animate={{ y : "0%" }}
+                                            exit={{ y : "-100%" }}
+                                            transition={{ duration: 0.5}}
+                                            className="inline-block">0{index}
+                                        </motion.span>
+                                    </span>
+                                    <span className="inline-block border px-3 rounded-full py-1 overflow-hidden text-[#b1a696]">
+                                        <span 
+                                            className="inline-block">0{length}</span>
+                                    </span>
+                                </div>
+                                <div className="flex-1 text-sm lg:text-2xl">
+                                    <p className="flex flex-wrap gap-x-1" key={`${info.name} text`}>
+                                        {text.map((word, i) => (
+                                            <span key={word + i} className="overflow-hidden">
+                                                <motion.span
+                                                    initial={{ y : "100%" }}
+                                                    animate={{ y : "0%" }}
+                                                    exit={{ y : "-100%" }}
+                                                    transition={{ duration: 0.5}}
+                                                    className="inline-block"
+                                                >
+                                                    {word}
+                                                </motion.span>
+                                            </span>
+                                        ))}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

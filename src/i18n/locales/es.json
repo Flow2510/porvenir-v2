@@ -1,19 +1,134 @@
 {
     "menu": {
-        "welcome": "Welcome",
-        "introduction": "Introduction",
-        "rooms": "Rooms",
-        "hostel": "The Hostel",
-        "activities": "Activities",
-        "feedback": "Feedback"
+        "welcome": "Inicio",
+        "introduction": "Introducción",
+        "rooms": "Habitaciones",
+        "hostel": "El Hostal",
+        "activities": "Actividades",
+        "feedback": "Opiniones"
     },
     "hero": {
-        "title": "Closer to Nature, Closer to Yourself",
-        "subtitle": "A peaceful jungle retreat near Santa Marta."
+        "title": {
+            "line1": "Más cerca de",
+            "line2": "la naturaleza, más cerca",
+            "line3": "de ti mismo"
+        },
+        "subtitle": {
+            "line1": "Escápate a un tranquilo refugio en la selva.",
+            "line2": "Entre Santa Marta y Minca."
+        }
+    },
+    "intro": {
+        "text1": "Escondido entre Santa Marta y Minca, nuestro hostal es un lugar donde la selva tropical marca el ritmo. Despierta con el canto de los pájaros, disfruta de deliciosos desayunos tropicales, relájate en un entorno tranquilo y descubre el equilibrio perfecto entre aventura y descanso.",
+        "text2": "Empieza el día con frutas tropicales frescas, termínalo con un cóctel bajo las estrellas y disfruta de los placeres sencillos de la vida rodeado de naturaleza."
+    },
+    "discover": {
+        "title": "Descubre lo mejor de Santa Marta",
+        "text": "Desde exuberantes senderos en la selva hasta playas caribeñas de arena blanca, cada día trae una nueva aventura. Descubre paisajes impresionantes, encantadores pueblos locales y experiencias inolvidables a solo unos minutos del hostal.",
+        "subtitle": "Tu punto de partida perfecto para explorar",
+        "tags": {
+            "Jungle Trails": "Senderos en la selva",
+            "Waterfalls": "Cascadas",
+            "Minca": "Minca",
+            "Tayrona": "Tayrona",
+            "Caribbean Beaches": "Playas del Caribe",
+            "Birdwatching": "Avistamiento de aves",
+            "Coffee Farms": "Fincas cafeteras",
+            "Sunsets": "Atardeceres",
+            "Local Food": "Gastronomía local",
+            "Wildlife": "Vida silvestre",
+            "Hiking": "Senderismo",
+            "Nature": "Naturaleza"
+        }
+    },
+    "rooms": {
+        "chamber": {
+            "name": "Habitación",
+            "title": "Habitación privada en la selva",
+            "text": "Un espacio privado diseñado para ayudarte a relajarte después de un día de exploración. Disfruta de una habitación cálida y confortable con todo lo necesario para descansar, recargar energías y vivir una estancia tranquila en un ambiente acogedor.",
+            "alt": "Habitación privada con una acogedora cama doble y un ambiente cálido"
+        },
+        "bed": {
+            "name": "Cama",
+            "title": "Dormitorio compartido en la selva",
+            "text": "Una cómoda cama en una habitación compartida, ideal para viajeros que buscan conocer gente y vivir nuevas experiencias. Disfruta de tu propio espacio mientras compartes el ambiente acogedor y dinámico del hostal.",
+            "alt": "Dormitorio compartido con cómodas camas individuales"
+        },
+        "lodge": {
+            "name": "Lodge",
+            "title": "Lodge privado con jardín",
+            "text": "Un refugio privado rodeado de naturaleza, donde el tiempo parece detenerse. Relájate en tu terraza privada con una hamaca, disfruta de momentos de tranquilidad a la sombra y déjate envolver por un ambiente único y sereno.",
+            "alt": "Lodge rodeado de naturaleza con terraza privada y hamaca"
+        },
+        "location-cta": {
+            "title": "Ubicación",
+            "text": "Ubicado perfectamente entre la selva y la costa caribeña.",
+            "button": "Cómo llegar"
+        }
+    },
+    "infos": {
+        "terrace": {
+            "title": "Un refugio escondido sobre la selva",
+            "text": "Nuestra terraza ofrece un rincón de paz rodeado de paisajes tropicales, aire puro y la atmósfera única de la Sierra Nevada.",
+            "alt": "Terraza panorámica sobre la selva"
+        },
+        "garden": {
+            "title": "La naturaleza como único escenario",
+            "text": "Explora un jardín tropical donde cada sendero revela nuevos colores, aromas y las maravillas ocultas de los paisajes naturales de Colombia.",
+            "alt": "Exuberante jardín tropical"
+        },
+        "pool": {
+            "title": "Un oasis natural para relajarse",
+            "text": "Después de un día de aventuras por la selva o la costa caribeña, relájate y recarga energías en nuestra tranquila piscina al aire libre.",
+            "alt": "Piscina al aire libre rodeada de selva"
+        }
+    },
+    "info-modal": {
+        "button": "Reservar ahora"
+    },
+    "adventures": {
+        "subtitle": "Experiencias",
+        "title": "Cada día trae una nueva aventura",
+        "text1": "Ya sea que busques momentos de tranquilidad en la naturaleza o aventuras inolvidables, nuestra ubicación te ofrece un acceso privilegiado a cascadas, senderos de senderismo, fincas cafeteras, la vibrante ciudad de Santa Marta y las impresionantes playas del Parque Nacional Natural Tayrona.",
+        "text2": "Explora la región a tu propio ritmo y disfruta de experiencias inolvidables a solo unos minutos del hostal."
+    },
+    "activities": {
+        "jungle": {
+            "title": "Explora la selva",
+            "text": "Adéntrate en la exuberante selva tropical que rodea el lodge. Recorre senderos panorámicos, descubre fauna exótica, escucha los sonidos de la naturaleza y disfruta de impresionantes miradores escondidos en el corazón de la Sierra Nevada.",
+            "alt": "Sendero de senderismo en la selva cerca de Santa Marta"
+        },
+        "santa-marta": {
+            "title": "Visita Santa Marta",
+            "text": "Descubre la ciudad más antigua de Colombia. Pasea por su colorido centro histórico, disfruta de sus cafés y restaurantes, visita la marina y vive el vibrante ambiente caribeño a solo unos minutos en coche.",
+            "alt": "Playa animada de Santa Marta por la noche"
+        },
+        "tayrona-park": {
+            "title": "Parque Nacional Natural Tayrona",
+            "text": "Dedica un día a explorar uno de los parques nacionales más emblemáticos de Colombia. Camina por bosques tropicales, observa la fauna autóctona y llega a playas espectaculares como Cabo San Juan, donde la selva se encuentra con el mar Caribe.",
+            "alt": "Laguna en el Parque Nacional Natural Tayrona"
+        },
+        "caribbean-beaches": {
+            "title": "Relájate en las playas del Caribe",
+            "text": "Escápate a la impresionante costa caribeña y relájate en playas de arena dorada con aguas cristalinas. El lugar perfecto para nadar, tomar el sol, hacer snorkel o simplemente disfrutar de la tranquilidad del paisaje tropical.",
+            "alt": "Playa del Caribe cerca de Santa Marta"
+        }
+    },
+    "footer": {
+        "subtitle": {
+            "line1": "Tu hogar en la selva,",
+            "line2": "cerca de la costa del Caribe."
+        },
+        "text1": "Descubre un refugio escondido en la selva colombiana, donde la comodidad, la aventura y la naturaleza se unen a las afueras de Santa Marta.",
+        "text2": "Un lugar tranquilo para desconectar, explorar y vivir la belleza de la selva tropical del Caribe.",
+        "button": {
+            "english": "English",
+            "french": "French",
+            "spanish": "Spanish"
+        }
     },
     "navbar": {
-        "rooms": "Rooms",
-        "activities": "Activities",
-        "contact": "Contact"
+        "menu": "Menú",
+        "close": "Cerrar"
     }
 }

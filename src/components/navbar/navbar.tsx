@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AnimatePresence } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     readonly toggleMenu: () => void;
@@ -8,6 +9,8 @@ type Props = {
 }
 
 export default function NavBar({ toggleMenu, menuIsOpen, modalIsOpen } : Props ) {
+    const { t } = useTranslation()
+
     return(
         <div className="fixed bottom-4 lg:bottom-8 left-[50%] translate-x-[-50%] flex items-center justify-center z-20">
             <button className="flex bg-[#f4efe7] p-1 items-center rounded-full cursor-pointer text-sm md:text-lg md:p-2" onClick={toggleMenu}>
@@ -22,7 +25,7 @@ export default function NavBar({ toggleMenu, menuIsOpen, modalIsOpen } : Props )
                                 transition={{ duration: 0.3 }}
                                 className="inline-block"
                             >
-                                Close
+                                {t('navbar.close')}
                             </motion.span>
                         :
                             <motion.span
@@ -33,7 +36,7 @@ export default function NavBar({ toggleMenu, menuIsOpen, modalIsOpen } : Props )
                                 transition={{ duration: 0.3 }}
                                 className="inline-block"
                             >
-                                Menu
+                                {t('navbar.menu')}
                             </motion.span>
                         }
                     </AnimatePresence>

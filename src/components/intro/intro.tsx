@@ -14,7 +14,7 @@ export default function Intro(){
     const height = useTransform(scrollYProgress, [0, 1], ["100%", "0%"])
 
     return(
-        <section className="p-5 flex flex-col gap-8 min-h-dvh justify-center lg:pb-30" id="intro">
+        <section className="p-5 flex flex-col gap-8 min-h-dvh justify-center lg:pb-30" id="introduction">
             <div className="text-[35px] tracking-[-0.2px] text-lightBrown w-full leading-[1.2] font-normal overflow-hidden relative origin-bottom" ref={ref}>
                 <p className="flex gap-2 flex-wrap text lg:text-6xl lg:max-w-[75%] lg:py-30">
                     {text} 

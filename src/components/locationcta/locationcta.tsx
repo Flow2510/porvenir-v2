@@ -1,5 +1,6 @@
 import { AnimatePresence } from "motion/react";
 import LocationModal from "../locationmodal/locationmodal";
+import { useTranslation } from "react-i18next";
 
 type Props = {
     readonly toggleModal: () => void;
@@ -7,6 +8,7 @@ type Props = {
 }
 
 export default function LocationCta({ toggleModal, modalIsOpen } : Props){
+    const { t } = useTranslation();
 
     return(
         <section className="px-5 py-25 text-center flex flex-col items-center gap-4 md:py-35 lg:py-45">
@@ -15,10 +17,10 @@ export default function LocationCta({ toggleModal, modalIsOpen } : Props){
                     <LocationModal />
                 }
             </AnimatePresence>
-            <p className="text-sm">Location</p> 
+            <p className="text-sm">{t('location-cta.title')}</p> 
             <p className="text-4xl lg:text-7xl lg:max-w-200 flex flex-col items-center">
-                <span>Perfectly located between the jungle and the Caribbean coast.</span>
-                <button onClick={toggleModal} className="text-[#b1a696] underline underline-offset-4 cursor-pointer w-fit">Find us</button>
+                <span>{t('location-cta.text')}</span>
+                <button onClick={toggleModal} className="text-[#b1a696] underline underline-offset-4 cursor-pointer w-fit">{t('location-cta.button')}</button>
             </p>
             <div className="location-cta-overlay">
 

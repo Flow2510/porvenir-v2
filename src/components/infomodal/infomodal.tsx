@@ -3,20 +3,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { motion } from "motion/react";
-
 import { Navigation, Pagination } from 'swiper/modules';
+import { useTranslation } from "react-i18next";
 
 type Props = {
     readonly closeModalInfo: () => void;
     readonly rooms: {
         id: string;
-        title: string;
-        text: string;
         img: {
             mobile: string;
             desktop: string;
         };
-        alt: string;
         gallery: {
             img: {
                 mobile: string;
@@ -33,6 +30,7 @@ type Props = {
 };
 
 export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Props) {
+    const { t } = useTranslation();
     const selected = rooms.find((room) => room.id === selectedRoom)
 
     if (!selected) return 
@@ -55,7 +53,7 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                     transition={{ duration: 0.5 }}
                     className="flex flex-col gap-6 flex-1 min-h-0">
                     <div className="flex items-center justify-between">
-                        <p className="text-2xl">{selected.title}</p>
+                        <p className="text-2xl">{t(`rooms.${selected.id}.name`)}</p>
                         <button className=" h-12 w-12 flex items-center justify-center rounded-full cursor-pointer bg-neutral-900 text-neutral-50 hover:text-neutral-950 hover:bg-neutral-50" onClick={closeModalInfo}>
                             <i className="fa-solid fa-xmark"></i>
                         </button>
@@ -79,7 +77,7 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                                 ))}
                             </Swiper>
                             <p className="text-sm text-[#b1a696] lg:max-w-[70%]">
-                                {selected.text}
+                                {t(`rooms.${selected.id}.text`)}
                             </p>
                         </div>
                         <div className="flex flex-col gap-4 text-sm">
@@ -104,13 +102,13 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                     className="flex p-5 w-full bg-[#181717] rounded-3xl justify-between items-center"
                 >
                     <div>
-                        <button>Reserve Now</button>
+                        <p>{t(`info-modal.button`)}</p>
                     </div>
                     <div className="flex gap-2">
-                        <a aria-label="Reserve on AirBnb" className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
+                        <a aria-label="Reserve on AirBnb" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="">
                             <i className="fa-brands fa-airbnb"></i>
                         </a>
-                        <a aria-label="Reserve on Booking" className="h-10 w-10 rounded-full border flex items-center justify-center" href="">
+                        <a aria-label="Reserve on Booking" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="">
                             <i className="fa-brands fa-blogger-b"></i>
                         </a>
                     </div>

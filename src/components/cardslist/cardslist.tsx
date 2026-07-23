@@ -7,13 +7,10 @@ type Props = {
     isDesktop: boolean;
     readonly rooms: {
         id: string;
-        title: string;
-        text: string;
         img: {
             mobile: string;
             desktop: string;
         };
-        alt: string;
         gallery: {
             img: {
                 mobile: string;
@@ -95,7 +92,7 @@ export default function CardsList({ isDesktop, rooms, openInfoModal } : Props){
 
     return(
         isDesktop ? 
-            <section className="relative w-full h-[600dvh]" id="houses" ref={ref}>
+            <section className="relative w-full h-[600dvh]" id="rooms" ref={ref}>
                 <AnimatePresence>
                     {infos &&
                         <motion.div 
@@ -164,7 +161,7 @@ export default function CardsList({ isDesktop, rooms, openInfoModal } : Props){
                 </div>
             </section>
         :
-        <section className="p-5 flex flex-col gap-20 relative" id="houses">
+        <section className="p-5 flex flex-col gap-20 relative" id="rooms">
             <div className="flex w-full overflow-hidden">
                 {tickerList.map((t,i) => (
                     <motion.div
