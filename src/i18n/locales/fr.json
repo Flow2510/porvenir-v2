@@ -122,9 +122,9 @@
         "text1": "Découvrez un refuge caché dans la jungle colombienne, où confort, aventure et nature se rencontrent aux portes de Santa Marta.",
         "text2": "Un lieu paisible pour ralentir, explorer et découvrir la beauté de la forêt tropicale des Caraïbes.",
         "button": {
-            "english": "Anglais",
+            "english": "English",
             "french": "Français",
-            "spanish": "Espagnole"
+            "spanish": "Español"
         }
     },
     "navbar": {
