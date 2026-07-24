@@ -83,7 +83,7 @@ export default function InfoSection({ isDesktop }: Props) {
     return(
         isDesktop ?
             <section id="the hostel" className="h-[500dvh]" ref={ref}>
-                <div className="sticky top-0 left-0 w-full h-dvh grid grid-cols-2 overflow-hidden">
+                <div className="sticky top-0 left-0 w-[95%] m-auto h-dvh grid grid-cols-2 overflow-hidden">
                     <motion.div style={{ x: xCard1, scale: scaleCard1, opacity: opacityCard1 }} className="w-full h-dvh p-2">
                         <InfoCard 
                             index={1}

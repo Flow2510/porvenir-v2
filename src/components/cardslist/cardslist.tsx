@@ -146,7 +146,7 @@ export default function CardsList({ isDesktop, rooms, openInfoModal } : Props){
                     }
                     <div className="absolute top-0 left-0 w-full h-dvh">
                         {rooms.map((room, i) => (
-                            <motion.div key={room.id + i} className="w-full h-full p-2 top-0 left-0 absolute" style={{ y: translateCards[i], scale: scaleCards[i], filter: filterCards[i] }}>
+                            <motion.div key={room.id + i} className="w-full h-full p-10 top-0 left-0 absolute" style={{ y: translateCards[i], scale: scaleCards[i], filter: filterCards[i] }}>
                                 <CardDesktop 
                                     openInfoModal={openInfoModal}
                                     room={room}

@@ -4,6 +4,8 @@ A modern and immersive website for a jungle lodge located near Santa Marta, Colo
 
 The project focuses on creating a premium digital experience that reflects the atmosphere of the lodge: nature, adventure and relaxation.
 
+The final photos and visual assets are currently pending from the property owner to ensure the website accurately represents the real experience, location, and atmosphere of the lodge.
+
 ## ✨ Features
 
 - Responsive design for mobile, tablet and desktop

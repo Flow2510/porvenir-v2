@@ -33,10 +33,10 @@ export default function Footer(){
                         <a href="www.facebook.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Facebook">
                             <i className="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Aitbnb">
+                        <a href="https://www.airbnb.fr/rooms/1433646435894375923?source_impression_id=p3_1784890725_P3Ujf-bjiS9Q2D1_" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Aitbnb">
                             <i className="fa-brands fa-airbnb"></i>
                         </a>
-                        <a href="www.google.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Booking">
+                        <a href="https://www.booking.com/hotel/co/auberge-del-porvenir.fr.html" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Booking">
                             <i className="fa-brands fa-blogger-b"></i>
                         </a>
                         <a href="www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via WhatsApp">

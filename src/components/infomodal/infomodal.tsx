@@ -105,10 +105,10 @@ export default function InfoModal({ closeModalInfo, selectedRoom, rooms } : Prop
                         <p>{t(`info-modal.button`)}</p>
                     </div>
                     <div className="flex gap-2">
-                        <a aria-label="Reserve on AirBnb" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="">
+                        <a aria-label="Reserve on AirBnb" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="https://www.airbnb.fr/rooms/1433646435894375923?source_impression_id=p3_1784890725_P3Ujf-bjiS9Q2D1_">
                             <i className="fa-brands fa-airbnb"></i>
                         </a>
-                        <a aria-label="Reserve on Booking" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="">
+                        <a aria-label="Reserve on Booking" className="h-10 w-10 rounded-full border flex items-center justify-center hover:text-neutral-950 hover:bg-neutral-50" href="https://www.booking.com/hotel/co/auberge-del-porvenir.fr.html">
                             <i className="fa-brands fa-blogger-b"></i>
                         </a>
                     </div>

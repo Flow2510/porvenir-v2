@@ -42,24 +42,26 @@ export default function ReviewSection() {
         <section className="px-5 py-35 flex flex-col gap-6" id="feedback">
             <p className="text-sm font-semibold">Do people like us?</p>
             <div className="flex flex-col gap-10">
-                    <p className="text-[35px] leading-[120%] tracking-[-0.2px] flex flex-wrap gap-x-2 lg:max-w-[75%]">
-                        {words.map((word, i) => (
-                            <span key={word + i} className="inline-block overflow-hidden">
-                                <AnimatePresence mode="wait">
+                <div className="min-h-60">
+                    <AnimatePresence>
+                        <p className="text-[35px] leading-[120%] tracking-[-0.2px] flex flex-wrap gap-x-2 lg:max-w-[75%]">
+                            {words.map((word, i) => (
+                                <span key={word + i} className="inline-block overflow-hidden">
                                     <motion.span 
-                                        key={reviewsIndex}
-                                        initial={{ y: "-100%" }}
-                                        animate={{ y: "0%" }}
-                                        exit={{ y: "-100%" }}
-                                        transition={{ duration: 0.3 }}
-                                        className="inline-block"
-                                    >
-                                        {word}
-                                    </motion.span>
-                                </AnimatePresence>
-                            </span>
-                        ))}
-                    </p>
+                                            key={reviewsIndex}
+                                            initial={{ y: "-100%" }}
+                                            animate={{ y: "0%" }}
+                                            exit={{ y: "-100%" }}
+                                            transition={{ duration: 0.3 }}
+                                            className="inline-block"
+                                        >
+                                            {word}
+                                        </motion.span>
+                                </span>
+                            ))}
+                        </p>
+                    </AnimatePresence>
+                </div>
                 <div className="flex gap-4 items-center">
                     <AnimatePresence mode="wait">
                         <motion.img 
