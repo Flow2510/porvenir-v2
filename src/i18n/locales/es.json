@@ -59,12 +59,12 @@
             "title": "Lodge privado con jardín",
             "text": "Un refugio privado rodeado de naturaleza, donde el tiempo parece detenerse. Relájate en tu terraza privada con una hamaca, disfruta de momentos de tranquilidad a la sombra y déjate envolver por un ambiente único y sereno.",
             "alt": "Lodge rodeado de naturaleza con terraza privada y hamaca"
-        },
-        "location-cta": {
-            "title": "Ubicación",
-            "text": "Ubicado perfectamente entre la selva y la costa caribeña.",
-            "button": "Cómo llegar"
         }
+    },
+    "location-cta": {
+        "title": "Ubicación",
+        "text": "Ubicado perfectamente entre la selva y la costa caribeña.",
+        "button": "Cómo llegar"
     },
     "infos": {
         "terrace": {

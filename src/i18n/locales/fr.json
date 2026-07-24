@@ -59,12 +59,12 @@
             "title": "Lodge privé avec jardin",
             "text": "Un refuge privé entouré par la nature, où le temps semble ralentir. Détendez-vous sur votre terrasse privée avec un hamac, profitez de moments de calme à l'ombre et laissez-vous porter par une atmosphère paisible et unique.",
             "alt": "Lodge en pleine nature avec terrasse privée et hamac"
-        },
-        "location-cta": {
-            "title": "Localisation",
-            "text": "Idéalement situé entre la jungle et la côte caraïbe.",
-            "button": "Nous trouver"
         }
+    },
+    "location-cta": {
+        "title": "Localisation",
+        "text": "Idéalement situé entre la jungle et la côte caraïbe.",
+        "button": "Nous trouver"
     },
     "infos": {
         "terrace": {

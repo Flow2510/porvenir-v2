@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
 import { AnimatePresence } from "motion/react"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function ReviewSection() {
+    const { t } = useTranslation()
     const [reviewsIndex, setReviewsIndex] = useState(0)
     const reviews = [
         {
@@ -40,9 +42,9 @@ export default function ReviewSection() {
 
     return(
         <section className="px-5 py-35 flex flex-col gap-6" id="feedback">
-            <p className="text-sm font-semibold">Do people like us?</p>
+            <p className="text-sm font-semibold">{t('review-section.title')}</p>
             <div className="flex flex-col gap-10">
-                <div className="min-h-60">
+                <div className="min-h-50">
                     <AnimatePresence>
                         <p className="text-[35px] leading-[120%] tracking-[-0.2px] flex flex-wrap gap-x-2 lg:max-w-[75%]">
                             {words.map((word, i) => (

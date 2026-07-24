@@ -24,7 +24,7 @@ The final photos and visual assets are currently pending from the property owner
 - Tailwind CSS
 - Swiper.js
 - Vite
-- Font Awesome
+- i18n
 
 ## 📱 Responsive Design
 

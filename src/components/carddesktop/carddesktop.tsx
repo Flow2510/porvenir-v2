@@ -67,7 +67,7 @@ export default function CardDesktop({ room, animate, openInfoModal } : Props) {
                                 animate={{ scale : 1 }}
                                 exit={{ scale : 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="bg-neutral-50 w-15 h-15 rounded-full text-neutral-950 text-4xl font-extralight cursor-pointer"
+                                className="hover:text-neutral-50 hover:bg-neutral-950 bg-neutral-50 w-15 h-15 rounded-full text-neutral-950 text-4xl font-extralight cursor-pointer"
                             >
                                 <span>+</span>
                             </motion.button>

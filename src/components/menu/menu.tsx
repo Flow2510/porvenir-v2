@@ -1,4 +1,5 @@
 import { motion } from "motion/react"
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 type Props = {
@@ -10,7 +11,8 @@ const image = "/logo.svg"
 const tickerList = [image, image, image]
 
 export default function Menu({ toggleMenu, isDesktop } : Props) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [langButton, setLangButton] = useState(false)
     const menu = [
         "welcome",
         "introduction",
@@ -19,7 +21,7 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
         "activities",
         "feedback"
     ];
-
+    const languages = Object.keys(i18n.options.resources!);
     return(
         isDesktop ? 
             <motion.div 
@@ -65,6 +67,24 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
                                 className="flex gap-6"
                             >                                
                                 <div className="flex gap-1 text-xl md:gap-2 lg:gap-4">
+                                    <div className="relative">
+                                        <button className={`capitalize rounded-full relative border w-12 h-12 cursor-pointer flex justify-center items-center text-xl ${langButton? " text-neutral-950 bg-neutral-50" : ""} hover:text-neutral-950 hover:bg-neutral-50`} aria-label="Change language" onClick={() => setLangButton(prev => !prev)}>
+                                            <span>
+                                                {i18n.resolvedLanguage}
+                                            </span>
+                                        </button>
+                                        {langButton && 
+                                            <div className="overflow-hidden">
+                                                <div className="absolute -top-30 left-0 bg-neutral-900 rounded-xl w-20 overflow-hidden flex flex-col">
+                                                    {languages.map((l) =>
+                                                        <button key={l} onClick={() => {i18n.changeLanguage(l); setLangButton(false)}} className="hover:text-neutral-950 hover:bg-neutral-50 px-2 py-1 capitalize cursor-pointer text-left">
+                                                            {l}
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
                                     <a aria-label="Follow us on Instagram" href="www.instagram.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50">
                                         <i className="fa-brands fa-instagram"></i>
                                     </a>
@@ -154,6 +174,24 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
                         className="flex flex-col gap-6"
                     >
                         <div className="flex gap-1">
+                            <div className="relative">
+                                <button className={`capitalize rounded-full relative border w-12 h-12 cursor-pointer flex justify-center items-center text-xl ${langButton? " text-neutral-950 bg-neutral-50" : ""} hover:text-neutral-950 hover:bg-neutral-50`} aria-label="Change language" onClick={() => setLangButton(prev => !prev)}>
+                                    <span>
+                                        {i18n.resolvedLanguage}
+                                    </span>
+                                </button>
+                                {langButton && 
+                                    <div className="overflow-hidden">
+                                        <div className="absolute -top-30 left-0 bg-neutral-900 rounded-xl w-20 overflow-hidden flex flex-col">
+                                            {languages.map((l) =>
+                                                <button key={l} onClick={() => {i18n.changeLanguage(l); setLangButton(false)}} className="hover:text-neutral-950 hover:bg-neutral-50 px-2 py-1 capitalize cursor-pointer text-left">
+                                                    {l}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                }
+                            </div>
                             <a href="www.instagram.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center text-xl" aria-label="link to Instagram">
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
@@ -179,7 +217,7 @@ export default function Menu({ toggleMenu, isDesktop } : Props) {
                     <img className="absolute top-0 left-0 w-full h-full object-cover" src="/maison.png" alt="" />
                     <div className="relative">
                         <motion.div 
-                            className="flex"
+                            className="flex flex-col"
                             animate={{ x: [0, -300] }}
                             transition={{
                                 duration: 10,

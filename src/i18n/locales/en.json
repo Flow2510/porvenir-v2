@@ -114,6 +114,9 @@
             "alt":"Caribbean beach near Santa Marta"
         }
     },
+    "review-section": {
+        "title": "Do people like us?"
+    },
     "footer": {
         "subtitle" : {
             "line1": "Your home in the jungle,",
