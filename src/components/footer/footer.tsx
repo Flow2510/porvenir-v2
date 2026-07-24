@@ -61,10 +61,10 @@ export default function Footer(){
                 <div className="p-5 text-sm flex justify-between">
                     <p className="text-[#b1a696]">Website made by - <a className="underline text-[#f4efe7]" href="https://sendra-florian.vercel.app/" target="_blank">Flow</a></p>
                     <div className="flex gap-4">
-                        <button onClick={() => i18n.changeLanguage("fr")} className="cursor-pointer hover:text-[#b1a696]">
+                        <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer hover:text-[#b1a696]">
                             {t(`footer.button.english`)}
                         </button>
-                        <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer hover:text-[#b1a696]">
+                        <button onClick={() => i18n.changeLanguage("fr")} className="cursor-pointer hover:text-[#b1a696]">
                             {t(`footer.button.french`)}
                         </button>
                         <button onClick={() => i18n.changeLanguage("es")} className="cursor-pointer hover:text-[#b1a696]">
