@@ -42,7 +42,7 @@ export default function ReviewSection() {
 
     return(
         <section className="px-5 py-35 flex flex-col gap-6" id="feedback">
-            <p className="text-sm font-semibold">{t('review-section.title')}</p>
+            <h2>{t('review-section.title')}</h2>
             <div className="flex flex-col gap-10">
                 <div className="min-h-50">
                     <AnimatePresence>

@@ -13,7 +13,7 @@ export default function Loader(){
                 className="h-full w-full bg-neutral-900 flex items-center justify-center relative"
             >
                 <motion.div
-                    exit={{ scale: 15, opacity: 0, transition: { scale: { duration: 2 }, opacity: { duration: 1, delay: 0.5} } }}
+                    exit={{ scale: 20, opacity: 0, transition: { scale: { duration: 2 }, opacity: { duration: 1, delay: 0.5} } }}
                     className="w-100 h-35 bg-[#b1a69625] rounded-full overflow-hidden relative flex items-center justify-center"
                 >                
                     <motion.div 

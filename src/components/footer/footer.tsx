@@ -27,10 +27,10 @@ export default function Footer(){
                         ))}
                     </nav>
                     <div className="flex gap-2 md:gap-3 lg:gap-4 text-xl lg:text-2xl md:col-1 md:row-2 items-center">
-                        <a href="www.instagram.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Instagram">
+                        <a href="https://www.instagram.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Instagram">
                             <i className="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="www.facebook.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Facebook">
+                        <a href="https://www.facebook.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="link to Facebook">
                             <i className="fa-brands fa-facebook-f"></i>
                         </a>
                         <a href="https://www.airbnb.fr/rooms/1433646435894375923?source_impression_id=p3_1784890725_P3Ujf-bjiS9Q2D1_" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Aitbnb">
@@ -39,10 +39,10 @@ export default function Footer(){
                         <a href="https://www.booking.com/hotel/co/auberge-del-porvenir.fr.html" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Book via Booking">
                             <i className="fa-brands fa-blogger-b"></i>
                         </a>
-                        <a href="www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via WhatsApp">
+                        <a href="https://www.whatsapp.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via WhatsApp">
                             <i className="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="www.google.com" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via mail">
+                        <a href="mailto:exemple@exemple.fr" target="_blank" className="rounded-full border w-12 h-12 flex justify-center items-center hover:text-neutral-950 hover:bg-neutral-50" aria-label="Contact us via mail">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
                     </div>
@@ -61,24 +61,24 @@ export default function Footer(){
                 <div className="p-5 text-sm flex justify-between">
                     <p className="text-[#b1a696]">Website made by - <a className="underline text-[#f4efe7]" href="https://sendra-florian.vercel.app/" target="_blank">Flow</a></p>
                     <div className="flex gap-4">
-                        <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer hover:text-[#b1a696]">
+                        <button onClick={() => i18n.changeLanguage("en")} className="cursor-pointer hover:text-[#b1a696]" aria-label="Change language to english">
                             {t(`footer.button.english`)}
                         </button>
-                        <button onClick={() => i18n.changeLanguage("fr")} className="cursor-pointer hover:text-[#b1a696]">
+                        <button onClick={() => i18n.changeLanguage("fr")} className="cursor-pointer hover:text-[#b1a696]" aria-label="Change language to French">
                             {t(`footer.button.french`)}
                         </button>
-                        <button onClick={() => i18n.changeLanguage("es")} className="cursor-pointer hover:text-[#b1a696]">
+                        <button onClick={() => i18n.changeLanguage("es")} className="cursor-pointer hover:text-[#b1a696]" aria-label="Change language to Spanish">
                             {t(`footer.button.spanish`)}
                         </button>
                     </div>
                 </div>
                 <div className="p-5 overflow-hidden w-full">
-                    <motion.img 
+                    <motion.img
                         initial={{ scaleY: 0 }}
                         whileInView={{ scaleY: 1 }}
                         viewport={{ once: true, margin: "150px"}}
                         transition={{ duration: 0.8 }}
-                        className="w-full origin-bottom" src="/logo.svg" alt="" 
+                        className="w-full origin-bottom" src="/logo.svg" alt=""
                     />
                 </div>
             </div>

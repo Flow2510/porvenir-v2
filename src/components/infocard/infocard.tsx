@@ -20,21 +20,21 @@ export default function InfoCard({ index, length, info, isDesktop }: Props){
                     <div className="w-full h-[60%] bg-[#2a2725] rounded-4xl">
                         <div className="h-full flex flex-col justify-between p-5">
                             <div>
-                                <p className="text-4xl leading-[120%] lg:max-w-[70%] flex flex-wrap gap-x-2" key={`${info.name} title`}>
+                                <h3 className="text-5xl leading-[120%] lg:max-w-[70%] flex flex-wrap gap-x-2" key={`${info.name} title`}>
                                     {title.map((word, i) => (
                                         <span key={word + i} className="overflow-hidden">
                                             <motion.span
                                                 initial={{ y : "100%" }}
                                                 animate={{ y : "0%" }}
                                                 exit={{ y : "-100%" }}
-                                                transition={{ duration: 0.5}}
+                                                transition={{ duration: 0.5, delay: 0 + (i / 10 )}}
                                                 className="inline-block"
                                             >
                                                 {word}
                                             </motion.span>
                                         </span>
                                     ))}
-                                </p>
+                                </h3>
                             </div>
                             <div className="flex w-full justify-between items-end gap">
                                 <div className="flex gap-2 flex-1">
@@ -61,7 +61,7 @@ export default function InfoCard({ index, length, info, isDesktop }: Props){
                                                     initial={{ y : "100%" }}
                                                     animate={{ y : "0%" }}
                                                     exit={{ y : "-100%" }}
-                                                    transition={{ duration: 0.5}}
+                                                    transition={{ duration: 0.5, delay: 0 + (i / 20 )}}
                                                     className="inline-block"
                                                 >
                                                     {word}
@@ -78,9 +78,9 @@ export default function InfoCard({ index, length, info, isDesktop }: Props){
         :
         <article className="w-full min-h-145 rounded-4xl bg-[#2a2725] flex flex-col gap-4 justify-between">
             <div className="px-2 pt-10 font-semibold text-2xl text-[#b1a696] leading-[120%]">
-                <p className="flex flex-col tracking-tight w-60">
+                <h3 className="flex flex-col w-60 text-2xl">
                     {info.title}
-                </p>
+                </h3>
             </div>
             <div className="flex flex-col gap-6 text-sm font-semibold leading-[120%]">
                 <div className="flex gap-4 p-2 pr-12">

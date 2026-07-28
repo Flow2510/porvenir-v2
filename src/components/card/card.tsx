@@ -34,10 +34,10 @@ export default function Card({ room, openInfoModal } : Props ){
                                 media="(min-width: 768px)"
                                 srcSet={room.img.desktop}
                             />
-                            <img className="h-full w-full object-cover object-top" src={room.img.mobile} alt="" />
+                            <img className="h-full w-full object-cover" src={room.img.mobile} alt="" />
                         </picture>
                     </div>
-                    <div className="absolute bottom-4 right-4 bg-[#b1a696] rounded-full h-12 w-12 flex items-center justify-center">
+                    <div className="absolute bottom-4 right-4 bg-neutral-50 rounded-full h-12 w-12 flex items-center justify-center">
                         <span className="text-4xl text-neutral-900 font-extralight">
                             +
                         </span>

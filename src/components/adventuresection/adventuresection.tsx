@@ -29,10 +29,10 @@ export default function AdventureSection({ isDesktop} : Props) {
     return(
         <section id="activities" className="relative">
             <div className="p-5 flex flex-col gap-8 pt-35" ref={ref}>
-                <motion.p className="text-sm font-semibold" style={{ opacity }}>
+                <motion.h2 style={{ opacity }}>
                     {t('adventures.subtitle')}
-                </motion.p>
-                <h3 className="text-[55px] leading-[120%] max-w-75 flex gap-x-2.5 flex-wrap lg:max-w-300 lg:text-9xl lg:gap-x-8" aria-label={text}>
+                </motion.h2>
+                <h3 className="text-[55px] leading-[120%] max-w-75 flex gap-x-2.5 flex-wrap md:max-w-120 lg:max-w-300 lg:text-9xl lg:gap-x-8" aria-label={text}>
                     {words.map((word, i) => (
                         <span key={word + i} className="inline-block overflow-hidden">
                             <motion.span style={{ y }} className="inline-block">
@@ -41,14 +41,15 @@ export default function AdventureSection({ isDesktop} : Props) {
                         </span>
                     ))}
                 </h3>
-                <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-center">
+                <motion.div                     
+                    className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-center">
                     <p className="text-[#b1a696] lg:col-2 lg:row-1 lg:text-4xl lg:pr-8">
                         {t('adventures.text1')}
                     </p>
                     <div className="lg:col-1 lg:row-1 lg:pr-20">
                         <p className="max-w-75 text-sm leading-[120%]">{t('adventures.text2')}</p>
                         <div className="py-6 flex flex-col gap-6">
-                            <AdventureItem 
+                            <AdventureItem
                                 title={"Santa Marta"}
                                 distance={"10"}
                                 difficulty={"20%"}
@@ -65,7 +66,7 @@ export default function AdventureSection({ isDesktop} : Props) {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <AdventureSlider 
                 isDesktop={isDesktop}

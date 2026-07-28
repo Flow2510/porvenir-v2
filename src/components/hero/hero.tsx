@@ -15,24 +15,24 @@ export default function Hero() {
 
     return(
         isDesktop ? 
-        <section className="relative h-dvh w-full p-2">
-            <div className="flex flex-col h-full justify-between p-5 relative z-1">
+        <section className="relative h-dvh w-full p-4" id="welcome">
+            <div className="flex flex-col h-full justify-between p-6 relative z-1">
                 <div className="w-[50%] max-w-150">
                     <img className="w-full" src="/logo.svg" alt="" />
                 </div>
                 <div className="flex justify-between items-end">
-                    <div className="text-[#b1a696] text-[23px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
+                    <h2 className="text-[#b1a696] text-[23px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
                         <span>{t('hero.title.line1')}</span>
                         <span>{t('hero.title.line2')}</span>
                         <span>{t('hero.title.line3')}</span>
-                    </div>
+                    </h2>
                     <div className="text-sm font-semibold tracking-[-0.2px] text-right">
                         <p>{t('hero.subtitle.line1')}</p>
                         <p>{t('hero.subtitle.line2')}</p>
                     </div>
                 </div>
             </div>
-            <div className="absolute w-full top-0 left-0 h-full p-2" ref={ref}>
+            <div className="absolute w-full top-0 left-0 h-full p-3" ref={ref}>
                 <div className="w-full h-full overflow-hidden rounded-4xl">
                     <picture>
                         <source
@@ -51,20 +51,20 @@ export default function Hero() {
         :
         <section className="w-full min-h-dvh flex justify-between px-5 flex-col gap-8 pb-24 relative" id="welcome">
             <div className="w-full flex flex-col gap-6 p-5">
-                <div className="">
+                <h1 className="" aria-label="Auberge del Porvenir">
                     <img className="w-full" src="/logo.svg" alt="" />
-                </div>
+                </h1>
             </div>
-            <div className="flex-1 flex flex-col justify-between">
-                <div className="text-[#b1a696] text-[23px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
+            <div className="flex-1 flex gap-2 flex-col justify-between">
+                <h2 className="text-[#b1a696] text-[26px] leading-[110%] tracking-[-0.2px] font-semibold flex flex-col">
                     <span>{t('hero.title.line1')}</span>
                     <span>{t('hero.title.line2')}</span>
                     <span>{t('hero.title.line3')}</span>
-                </div>
-                <div className="text-sm font-semibold tracking-[-0.2px]">
+                </h2>
+                <p className="text-sm  font-semibold tracking-[-0.2px]">
                     <p>{t('hero.subtitle.line1')}</p>
                     <p>{t('hero.subtitle.line2')}</p>
-                </div>
+                </p>
             </div>
             <div className="flex flex-col gap-4 ">
                 <div className="w-full h-[45dvh] bg-neutral-600 rounded-4xl overflow-hidden">

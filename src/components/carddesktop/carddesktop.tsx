@@ -45,19 +45,23 @@ export default function CardDesktop({ room, animate, openInfoModal } : Props) {
                 {animate &&
                     <div>
                         <div className="relative">
-                            <h2 className="whitespace-pre leading-[120%] text-8xl flex gap-x-4 flex-wrap max-w-200">
+                            <motion.h2 
+                                initial={{ opacity : 0, x: 50 }}
+                                animate={{ opacity : 1, x: 0 }}
+                                exit={{ opacity : 0, x: 50 }}
+                                transition={{ duration: 0.5 }}
+                                className="whitespace-pre leading-[120%] text-8xl flex gap-x-4 flex-wrap max-w-200"
+                            >
                                 {letters.map((letter, i) => (
                                     <span key={i + letter} className="inline-block overflow-hidden">
-                                        <motion.span
-                                            initial={{ y : "100%" }}
-                                            animate={{ y : "0%" }}
-                                            exit={{ y : "100%" }}
-                                            transition={{ duration: 0.5 }}
+                                        <span                                            
                                             className="inline-block"
-                                        >{letter}</motion.span>
+                                        >
+                                            {letter}
+                                        </span>
                                     </span>
                                 ))}
-                            </h2>
+                            </motion.h2>
                         </div>
                         <div className="absolute bottom-6 left-5 flex gap-6 items-center">
                             <motion.button
@@ -67,7 +71,7 @@ export default function CardDesktop({ room, animate, openInfoModal } : Props) {
                                 animate={{ scale : 1 }}
                                 exit={{ scale : 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="hover:text-neutral-50 hover:bg-neutral-950 bg-neutral-50 w-15 h-15 rounded-full text-neutral-950 text-4xl font-extralight cursor-pointer"
+                                className="hover:rotate-90 duration-300 hover:text-neutral-50 hover:bg-neutral-950 bg-neutral-50 w-15 h-15 rounded-full text-neutral-950 text-4xl font-extralight cursor-pointer"
                             >
                                 <span>+</span>
                             </motion.button>

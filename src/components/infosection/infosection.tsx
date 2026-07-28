@@ -82,7 +82,29 @@ export default function InfoSection({ isDesktop }: Props) {
 
     return(
         isDesktop ?
-            <section id="the hostel" className="h-[500dvh]" ref={ref}>
+            <section id="hostel" className="h-[500dvh] relative" ref={ref}>
+                <div>
+                    <div className="p-5 text-sm">
+                        <p className="max-w-50">{t('info-section.title')}</p>
+                    </div>
+                    <div>
+                        <div className="flex w-full overflow-hidden">
+                            {items.map((item, i) => (
+                                <motion.div 
+                                    animate={{ x: ["0%", "-100%"] }}
+                                    transition={{
+                                        duration: 5,
+                                        ease: "linear",
+                                        repeat: Infinity,
+                                    }}
+                                    className="w-full shrink-0 p-10" key={i + item}
+                                >
+                                    <img className="w-full" src={item} alt="" />
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
                 <div className="sticky top-0 left-0 w-[95%] m-auto h-dvh grid grid-cols-2 overflow-hidden">
                     <motion.div style={{ x: xCard1, scale: scaleCard1, opacity: opacityCard1 }} className="w-full h-dvh p-2">
                         <InfoCard 
@@ -160,11 +182,12 @@ export default function InfoSection({ isDesktop }: Props) {
                         </article>
                     </motion.div>
                 </div>
+                <div className="info-section-overlay"></div>
             </section>
         :
-        <section id="infos">
+        <section id="hostel" className="relative">
             <div className="p-5 text-sm">
-                <p className="max-w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className="max-w-50">{t('info-section.title')}</p>
             </div>
             <div>
                 <div className="flex w-full overflow-hidden">
@@ -194,6 +217,7 @@ export default function InfoSection({ isDesktop }: Props) {
                     />
                 ))}                
             </div>
+            <div className="info-section-overlay"></div>
         </section>
     )
 }

@@ -16,7 +16,7 @@ type Props = {
 export default function AdventureCard({ activity, index, itemLength } : Props) {
     return(
         <article className="w-full flex flex-col gap-6">
-            <div className="w-full aspect-1/0.5 rounded-4xl overflow-hidden relative">
+            <div className="w-full aspect-16/11 rounded-4xl overflow-hidden relative">
                 <picture>
                     <source
                         media="(min-width: 768px)"

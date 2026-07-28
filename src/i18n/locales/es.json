@@ -23,6 +23,7 @@
         "text2": "Empieza el día con frutas tropicales frescas, termínalo con un cóctel bajo las estrellas y disfruta de los placeres sencillos de la vida rodeado de naturaleza."
     },
     "discover": {
+        "name": "Discover",
         "title": "Descubre lo mejor de Santa Marta",
         "text": "Desde exuberantes senderos en la selva hasta playas caribeñas de arena blanca, cada día trae una nueva aventura. Descubre paisajes impresionantes, encantadores pueblos locales y experiencias inolvidables a solo unos minutos del hostal.",
         "subtitle": "Tu punto de partida perfecto para explorar",
@@ -44,19 +45,19 @@
     "rooms": {
         "chamber": {
             "name": "Habitación",
-            "title": "Habitación privada en la selva",
+            "title": "Habitación en la selva",
             "text": "Un espacio privado diseñado para ayudarte a relajarte después de un día de exploración. Disfruta de una habitación cálida y confortable con todo lo necesario para descansar, recargar energías y vivir una estancia tranquila en un ambiente acogedor.",
             "alt": "Habitación privada con una acogedora cama doble y un ambiente cálido"
         },
         "bed": {
             "name": "Cama",
-            "title": "Dormitorio compartido en la selva",
+            "title": "Dormitorio en la selva",
             "text": "Una cómoda cama en una habitación compartida, ideal para viajeros que buscan conocer gente y vivir nuevas experiencias. Disfruta de tu propio espacio mientras compartes el ambiente acogedor y dinámico del hostal.",
             "alt": "Dormitorio compartido con cómodas camas individuales"
         },
         "lodge": {
             "name": "Lodge",
-            "title": "Lodge privado con jardín",
+            "title": "Lodge con jardín",
             "text": "Un refugio privado rodeado de naturaleza, donde el tiempo parece detenerse. Relájate en tu terraza privada con una hamaca, disfruta de momentos de tranquilidad a la sombra y déjate envolver por un ambiente único y sereno.",
             "alt": "Lodge rodeado de naturaleza con terraza privada y hamaca"
         }
@@ -82,6 +83,9 @@
             "text": "Después de un día de aventuras por la selva o la costa caribeña, relájate y recarga energías en nuestra tranquila piscina al aire libre.",
             "alt": "Piscina al aire libre rodeada de selva"
         }
+    },
+    "info-section": {
+        "title": "Todo lo que necesitas para relajarte y reconectar con la naturaleza."
     },
     "info-modal": {
         "button": "Reservar ahora"
@@ -113,6 +117,9 @@
             "text": "Escápate a la impresionante costa caribeña y relájate en playas de arena dorada con aguas cristalinas. El lugar perfecto para nadar, tomar el sol, hacer snorkel o simplemente disfrutar de la tranquilidad del paisaje tropical.",
             "alt": "Playa del Caribe cerca de Santa Marta"
         }
+    },
+    "review-section": {
+        "title": "Do people like us?"
     },
     "footer": {
         "subtitle": {
